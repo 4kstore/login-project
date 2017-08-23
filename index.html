@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Login Page</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
   <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
@@ -10,10 +11,18 @@
       <form action="" autocomplete="off">
         <h1>Login Form</h1>
         <div class="input-field">
-          <input placeholder="email" type="email" required>
+          <input placeholder="Username" name="user" type="text" required>
         </div>
         <div class="input-field">
-          <input placeholder="password" type="password" required autocomplete="new-password">
+          <input placeholder="Password" type="password" name="password" required autocomplete="new-password">
+        </div>
+        <div class="input-field">
+          <select name="airline">
+            <option value="" disabled selected>Select Airline</option>
+            <option value="jp">40-MILE AIR, LTD (Q5)</option>
+            <option value="jp">AEGEAN AIRLINES (A3)</option>
+            <option value="jp">ADRIA AIRWAYS (JP)</option>
+          </select>
         </div>
         <div class="actions">
           <button>Login</button>
@@ -21,5 +30,8 @@
       </form>
     </div>
   </section>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
